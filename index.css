@@ -632,12 +632,15 @@ header.active .line-1 {
 }
 
 .section-2 ul li:nth-child(2) img:nth-child(1){
-    width: 29vw;
+    width: 26vw;
+    height: 15vw;
     margin-right: 1vw;
+    object-fit: cover; 
+    object-position: left top; /* 또는 0% 0% */
 }
 
 .section-2 ul li:nth-child(2) img:nth-child(2){
-    width: 56vw;
+    width: 46vw;
 }
 
 .section-3{
