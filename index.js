@@ -359,51 +359,51 @@ gsap.from(
 
 
 /* --- Section 3: 챈들러 아코디언 (너비 고정형) --- */
-const listItems = document.querySelectorAll('.section-3 ul li');
+// const listItems = document.querySelectorAll('.section-3 ul li');
 
-listItems.forEach((li) => {
-    // 클릭할 대상 (제목)
-    const title = li.querySelector('h3');
-    // 숨겨질 대상들 (내용, 이미지)
-    const hiddenContents = li.querySelectorAll('p, img');
+// listItems.forEach((li) => {
+//     // 클릭할 대상 (제목)
+//     const title = li.querySelector('h3');
+//     // 숨겨질 대상들 (내용, 이미지)
+//     const hiddenContents = li.querySelectorAll('p, img');
 
-    // 1. [초기 상태] 안 보이고, 공간도 차지 안 함
-    gsap.set(hiddenContents, { 
-        display: "none", // 아예 공간 삭제 (h3 바로 밑에 붙게)
-        opacity: 0, 
-        y: 50            // 아래로 50px 내려가 있음
-    });
+//     // 1. [초기 상태] 안 보이고, 공간도 차지 안 함
+//     gsap.set(hiddenContents, { 
+//         display: "none", // 아예 공간 삭제 (h3 바로 밑에 붙게)
+//         opacity: 0, 
+//         y: 50            // 아래로 50px 내려가 있음
+//     });
 
-    let isOpen = false; // 열림/닫힘 상태 기억
+//     let isOpen = false; // 열림/닫힘 상태 기억
 
-    // 2. [클릭 이벤트]
-    title.addEventListener('click', () => {
-        if (!isOpen) {
-            // ▶ 열기 (Open)
-            gsap.to(hiddenContents, {
-                display: "block", // 공간 차지 시작
-                opacity: 1,       // 보임
-                y: 0,             // 제자리로 쑥 올라옴
-                duration: 0.5,
-                ease: "power2.out",
-                stagger: 0.1      // p -> img 순서로 따닥 나옴
-            });
-            isOpen = true;
-        } else {
-            // ▶ 닫기 (Close)
-            gsap.to(hiddenContents, {
-                opacity: 0,
-                y: 50,            // 다시 아래로 내려감
-                duration: 0.3,
-                onComplete: () => {
-                    // 애니메이션 끝나면 공간 삭제
-                    gsap.set(hiddenContents, { display: "none" });
-                }
-            });
-            isOpen = false;
-        }
-    });
-});
+//     // 2. [클릭 이벤트]
+//     title.addEventListener('click', () => {
+//         if (!isOpen) {
+//             // ▶ 열기 (Open)
+//             gsap.to(hiddenContents, {
+//                 display: "block", // 공간 차지 시작
+//                 opacity: 1,       // 보임
+//                 y: 0,             // 제자리로 쑥 올라옴
+//                 duration: 0.5,
+//                 ease: "power2.out",
+//                 stagger: 0.1      // p -> img 순서로 따닥 나옴
+//             });
+//             isOpen = true;
+//         } else {
+//             // ▶ 닫기 (Close)
+//             gsap.to(hiddenContents, {
+//                 opacity: 0,
+//                 y: 50,            // 다시 아래로 내려감
+//                 duration: 0.3,
+//                 onComplete: () => {
+//                     // 애니메이션 끝나면 공간 삭제
+//                     gsap.set(hiddenContents, { display: "none" });
+//                 }
+//             });
+//             isOpen = false;
+//         }
+//     });
+// });
 
 gsap.from(
             ".section-4 .section-4-title",
