@@ -584,6 +584,7 @@ header.active .line-1 {
     min-height: 110vw;
     position: relative;
     /* border: 1px solid red; */
+    margin-top: 20vw;
 }
 
 .section-2 h1{
