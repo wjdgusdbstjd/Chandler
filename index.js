@@ -293,7 +293,7 @@ gsap.from(
                 stagger: 0.3, //각 애미메이션 사이에 0.15초의 지연을 둠
                 scrollTrigger: {
                     trigger: ".section-3 li",   // → trigger 를 h2 로
-                    start: "top center",                // h2 의 top 이 뷰포트 bottom 에 닿을 때
+                    start: "top bottom",                // h2 의 top 이 뷰포트 bottom 에 닿을 때
                     toggleActions: "play none none none", // 나타날때마다 모션 진행
                     markers: false //페이지에 스크롤 위치 마커
                 }
