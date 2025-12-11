@@ -478,7 +478,7 @@ header.active .line-1 {
     width: 100vw;
     min-height: 100vw;
     position: relative;
-    background-image: url('../img/chadler-main-bg.png');
+    background-image: url('./img/chadler-main-bg.png');
     background-size: 100%;
     background-repeat: no-repeat;
     /* border: 1px solid red; */
@@ -646,7 +646,7 @@ header.active .line-1 {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20vw;
+    /* margin-top: 20vw; */
     /* border: 1px solid red; */
 }
 
@@ -692,6 +692,9 @@ header.active .line-1 {
 
 .section-3 ul li{
     margin: 0.8vw;
+    width: 25vw;
+    height: 43vw;
+    /* border: 1px solid red; */
 }
 
 .section-3 ul li h3{
@@ -701,6 +704,12 @@ header.active .line-1 {
     color: #3ACD4C;
     font-family: 'Gurmukhi MN';
     margin-bottom: 0.6vw;
+    cursor: pointer; /* 손가락 모양 커서 */
+    transition: color 0.3s; /* 색상 부드럽게 변환 */
+}
+
+.section-3 ul li h3:hover {
+    opacity: 0.7; /* 마우스 올렸을 때 살짝 흐려짐 효과 (선택사항) */
 }
 
 .section-3 ul li img{
@@ -817,7 +826,7 @@ header.active .line-1 {
     position: relative;
     /* border: 1px solid red; */
     background-color: black;
-    background-image: url('../img/chandler-10.png');
+    background-image: url('./img/chandler-10.png');
     /* background-attachment: fixed; */
     background-size: 100%;
     background-position: center;
